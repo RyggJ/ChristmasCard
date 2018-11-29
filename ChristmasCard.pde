@@ -159,7 +159,10 @@ class snowpile
      x1=-25;
      x2=width+40;
      y1=150;
-   }  
+   }
+   noFill();
+   stroke(0);
+   ellipse(500,900,1700,1700);
   }
   
 }
