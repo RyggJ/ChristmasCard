@@ -3,13 +3,13 @@ snowFlake[] flakes=new snowFlake[numFlakes];
 smoke[] smonks=new smoke[numSmonks];
 snowpile snowp;
 house hoe;
-int r=85;
-int g=156;
-int b=200;
+double skyR=58;
+double skyG=93;
+double skyB=116;
 
 void setup() {
   size(1000, 800);
-  background(r, g, b); 
+  background((int)skyR,(int)skyG,(int)skyB); 
   snowp = new snowpile();
   hoe = new house();
   for (int i=0; i<numFlakes; i++) {
@@ -21,7 +21,7 @@ void setup() {
 }
 
 void draw() {
-  background(r, g, b);
+  background((int)skyR,(int)skyG,(int)skyB);
   for (int i=0; i<numSmonks; i++) {
     smonks[i].incrementer();
     smonks[i].show();
@@ -189,11 +189,7 @@ class snowpile
       y=200;
       angle=-PI/6;
       day=!day;
-    }
-    if (day) {
-      time++;
-    } else {
-      time--;
+      time=0;
     }
     //-------------bank---------------
     fill(255);
@@ -203,6 +199,18 @@ class snowpile
     } else {
       bankY-=(1/7.0);
     }
+    //-------------sky-------------
+    if((day&&time<300)||(!day&&time>300)){
+      skyR+=(58/300.0);
+      skyG+=(93/300.0);
+      skyB+=(116/300.0);
+    }
+    else{
+      skyR-=(58/300.0);
+      skyG-=(93/300.0);
+      skyB-=(116/300.0);
+    }
+    time++;
   }
 }
 class house {
