@@ -23,7 +23,7 @@ void setup() {
 
 void draw(){
   background((int)skyR,(int)skyG,(int)skyB); 
-
+  hoe.showtree();
   hoe.show();
   snowp.show();
   snowp.daynight();
@@ -185,5 +185,17 @@ class house{
       rect(650,650,100,10);
       rect(695,600,10,100);
       image(wreath,815,500);
+    }
+     void showtree(){
+      fill(101, 67, 33);
+      rect(200,700,50,100);
+      fill(58, 164, 34);
+      triangle(100,700,225,500,350,700);
+      triangle(110,625,225,400,340,625);
+      triangle(120,550,225,350,330,550);
+      fill(255,255,0);
+      triangle(200,340,225,300,250,340);
+      triangle(200,320,225,350,250,320);
+
     }
   }
