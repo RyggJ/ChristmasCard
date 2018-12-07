@@ -5,8 +5,10 @@ snowpile snowp;
 house hoe;
 double skyR=58;
 double skyG=93;
-double skyB=116;
-void setup(){
+PImage wreath;
+
+void setup() {
+  wreath=loadImage("wreath.png");
   size(1000,800);
   background((int)skyR,(int)skyG,(int)skyB); 
  snowp = new snowpile();
