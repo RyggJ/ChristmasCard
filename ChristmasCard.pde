@@ -184,6 +184,6 @@ class house{
       fill(0);
       rect(650,650,100,10);
       rect(695,600,10,100);
-     
+      image(wreath,815,500);
     }
   }
