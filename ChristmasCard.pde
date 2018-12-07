@@ -5,6 +5,7 @@ snowpile snowp;
 house hoe;
 double skyR=58;
 double skyG=93;
+double skyB=116;
 PImage wreath;
 
 void setup() {
