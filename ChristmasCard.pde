@@ -78,7 +78,7 @@ class snowFlake{
 }
 
 class smoke{
-  double x=925,y=250,size=10,tint=250,sizeinc,tintinc,xinc,yinc;
+  double x=925,y=300,size=10,tint=250,sizeinc,tintinc,xinc,yinc;
   smoke(){
     sizeinc=Math.random()/4;
     tintinc=Math.random()*1.5+.25;
